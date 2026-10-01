@@ -3,231 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday Kak Eka</title>
+    <title>Happy Birthday kakakkuuu</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            font-family: 'Arial', sans-serif;
-            overflow: hidden;
-        }
-
-        .container {
-            text-align: center;
-            position: relative;
-        }
-
-        .cake {
-            width: 300px;
-            height: 250px;
-            margin: 0 auto 30px;
-            position: relative;
-        }
-
-        /* Lapisan Kue 1 */
-        .cake-layer-1 {
-            width: 280px;
-            height: 60px;
-            background: linear-gradient(to bottom, #a3d2a7, #8bc88f);
-            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
-            margin: 0 auto;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        }
-
-        /* Lapisan Kue 2 */
-        .cake-layer-2 {
-            width: 220px;
-            height: 50px;
-            background: linear-gradient(to bottom, #f7e8aa, #f5dfa8);
-            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
-            margin: -10px auto 0;
-            position: relative;
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
-        }
-
-        /* Lapisan Kue 3 */
-        .cake-layer-3 {
-            width: 180px;
-            height: 45px;
-            background: linear-gradient(to bottom, #c5826f, #a8695c);
-            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
-            margin: -8px auto 0;
-            position: relative;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-        }
-
-        /* Lilin */
-        .candle {
-            position: absolute;
-            bottom: 45px;
-            width: 6px;
-            height: 35px;
-            background: #66cccc;
-            border-radius: 3px;
-            animation: flicker 0.5s infinite alternate;
-        }
-
-        .candle:nth-child(1) { left: 60px; }
-        .candle:nth-child(2) { left: 120px; }
-        .candle:nth-child(3) { left: 180px; }
-        .candle:nth-child(4) { left: 240px; }
-        .candle:nth-child(5) { left: 90px; bottom: 80px; }
-
-        /* Api Lilin */
-        .flame {
-            position: absolute;
-            bottom: 38px;
-            width: 4px;
-            height: 15px;
-            background: radial-gradient(ellipse at center, #ff6600, #ff8c00);
-            border-radius: 50% 50% 50% 0;
-            animation: flame 1.5s infinite;
-        }
-
-        .candle:nth-child(1) .flame { left: 61px; }
-        .candle:nth-child(2) .flame { left: 121px; }
-        .candle:nth-child(3) .flame { left: 181px; }
-        .candle:nth-child(4) .flame { left: 241px; }
-        .candle:nth-child(5) .flame { left: 91px; }
-
-        @keyframes flicker {
-            0% { opacity: 0.8; }
-            100% { opacity: 1; }
-        }
-
-        @keyframes flame {
-            0%, 100% { transform: translateY(0) scaleX(1); }
-            50% { transform: translateY(-3px) scaleX(0.8); }
-        }
-
-        /* Konfeti */
-        .confetti {
-            position: fixed;
-            width: 10px;
-            height: 10px;
-            pointer-events: none;
-            animation: fall 3s linear forwards;
-        }
-
-        @keyframes fall {
-            to {
-                transform: translateY(100vh) rotate(360deg);
-                opacity: 0;
-            }
-        }
-
-        /* Text */
-        h1 {
-            color: white;
-            font-size: 48px;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-            animation: bounce 1s infinite;
-        }
-
-        h2 {
-            color: #fff;
-            font-size: 36px;
-            margin-top: 30px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-        }
-
-        p {
-            color: #fff;
-            font-size: 18px;
-            margin-top: 20px;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-        }
-
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
-
-        /* Button */
-        button {
-            margin-top: 30px;
-            padding: 12px 30px;
-            font-size: 16px;
-            background: white;
-            color: #667eea;
-            border: none;
-            border-radius: 25px;
-            cursor: pointer;
-            font-weight: bold;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            transition: all 0.3s ease;
-        }
-
-        button:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-        }
-
-        button:active {
-            transform: scale(0.95);
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { display: flex; justify-content: center; align-items: center; min-height: 100vh; background-color: #d3dae8; font-family: 'Curlz MT', cursive; overflow: hidden; }
+        canvas { display: block; background-color: #d3dae8; max-width: 100vw; max-height: 100vh; }
+        .text-overlay { position: absolute; bottom: 50px; left: 50%; transform: translateX(-50%); text-align: center; z-index: 10; }
+        .text-overlay h1 { font-size: 50px; color: #333; font-weight: bold; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.1); }
+        .text-overlay h2 { font-size: 40px; color: #333; font-weight: bold; text-shadow: 2px 2px 4px rgba(0,0,0,0.1); }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>🎉 Happy Birthday 🎉</h1>
-        <div class="cake">
-            <div class="cake-layer-1"></div>
-            <div class="cake-layer-2"></div>
-            <div class="cake-layer-3">
-                <div class="candle">
-                    <div class="flame"></div>
-                </div>
-                <div class="candle">
-                    <div class="flame"></div>
-                </div>
-                <div class="candle">
-                    <div class="flame"></div>
-                </div>
-                <div class="candle">
-                    <div class="flame"></div>
-                </div>
-                <div class="candle">
-                    <div class="flame"></div>
-                </div>
-            </div>
-        </div>
-        <h2>Kak Eka 🎂</h2>
-        <p>Semoga hari spesialmu penuh dengan kebahagiaan dan tawa yang meriah! 💝</p>
-        <button onclick="createConfetti()">🎊 Rayakan! 🎊</button>
-    </div>
-
+    <canvas id="canvas" width="900" height="800"></canvas>
+    <div class="text-overlay"><h1>Happy Birthday</h1><h2>kakakkuuu</h2></div>
     <script>
-        const confettiColors = ['#4CAF50', '#FFC107', '#2196F3', '#FF5722', '#9C27B0', '#3F51B5', '#00BCD4', '#009688'];
-
-        function createConfetti() {
-            for (let i = 0; i < 50; i++) {
-                const confetti = document.createElement('div');
-                confetti.classList.add('confetti');
-                confetti.style.left = Math.random() * window.innerWidth + 'px';
-                confetti.style.top = '-10px';
-                confetti.style.background = confettiColors[Math.floor(Math.random() * confettiColors.length)];
-                confetti.style.animation = `fall ${2 + Math.random() * 1}s linear forwards`;
-                document.body.appendChild(confetti);
-
-                setTimeout(() => confetti.remove(), 3000);
-            }
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        const colors = { light_green:'#c5e8c8', medium_green:'#a3d2a7', light_yellow:'#f7e8aa', cream:'#fffceb', brown:'#8b5a2b', dark_brown:'#5e4425', orange:'#ffa500', teal:'#66cccc', flame_orange:'#ff6600', sky_blue:'#87ceeb', light_steel:'#b0c4de', confetti_colors:['#4CAF50','#FFC107','#2196F3','#FF5722','#9C27B0','#3F51B5','#00BCD4','#009688'] };
+        function ellipseX(width, deg) { return width * Math.cos(deg * Math.PI / 180); }
+        function ellipseY(height, deg) { return height * Math.sin(deg * Math.PI / 180); }
+        function ellipse(x,y,w,h,stroke,fill) { ctx.beginPath(); ctx.strokeStyle=stroke; ctx.fillStyle=fill; ctx.lineWidth=3; for(let d=0;d<360;d++){const px=ellipseX(w,d)+x, py=ellipseY(h,d)+y; d===0?ctx.moveTo(px,py):ctx.lineTo(px,py);} ctx.closePath(); ctx.fill(); ctx.stroke(); }
+        function candle(x,y,h) { ctx.fillStyle=colors.teal; ctx.fillRect(x-4,y,8,h); ctx.strokeStyle='white'; ctx.lineWidth=2; for(let i=1;i<6;i++){ctx.beginPath();ctx.moveTo(x+4,y+10*i);ctx.lineTo(x-4,y+10*i);ctx.stroke();} ctx.fillStyle=colors.flame_orange; ctx.beginPath(); ctx.ellipse(x,y+h+10,4,10,0,0,Math.PI*2); ctx.fill(); }
+        function dots(count,xMin,xMax,yMin,yMax,sizeMin,sizeMax){ for(let i=0;i<count;i++){const x=Math.random()*(xMax-xMin)+xMin+450,y=Math.random()*(yMax-yMin)+yMin+400,s=Math.random()*(sizeMax-sizeMin)+sizeMin;ctx.fillStyle=colors.confetti_colors[Math.floor(Math.random()*colors.confetti_colors.length)];ctx.beginPath();ctx.arc(x,y,s,0,Math.PI*2);ctx.fill();} }
+        function draw(){
+            ctx.fillStyle='#d3dae8'; ctx.fillRect(0,0,900,800); const x=450,y=350;
+            ellipse(x,y,150,60,'white',colors.light_green);
+            ctx.fillStyle=colors.medium_green; ctx.beginPath(); ctx.ellipse(x,y+5,150,65,0,0,Math.PI*2); ctx.fill();
+            ellipse(x,y,120,48,'white',colors.light_yellow);
+            ellipse(x,y+70,120,48,colors.light_yellow,colors.light_yellow); ellipse(x,y+70,110,44,colors.cream,colors.cream);
+            ctx.fillStyle=colors.sky_blue; ctx.beginPath(); ctx.ellipse(x,y+10,120,48,0,0,Math.PI*2); ctx.fill();
+            ellipse(x,y+120,80,32,colors.brown,colors.brown); ellipse(x,y+120,70,28,colors.orange,colors.orange);
+            [[x+60,y+120,50],[x-60,y+120,50],[x,y+130,50],[x+30,y+110,50],[x-30,y+110,50]].forEach(p=>candle(...p));
+            [[80,-120,120,-25,30,2,5],[40,-90,90,-35,10,2,5],[40,-80,80,60,90,2,5],[30,-50,50,45,70,2,5],[50,-500,500,120,300,3,5]].forEach(r=>dots(...r));
         }
-
-        // Auto confetti saat page load
-        window.addEventListener('load', () => {
-            createConfetti();
-        });
+        draw();
     </script>
 </body>
 </html>
